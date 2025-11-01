@@ -14,34 +14,54 @@ import dsa.objects.List;
  */
 public class Demo {
     public static void main(String[] args) {
-        List li = new List();
+        Queue qu = new Queue();
+        qu.add(10);
+        qu.add(20);
         
-        li.addLast(10);
-        li.addLast(20);
-        li.addLast(30);
-        li.addLast(40);
-        li.addLast(50);
-        // li.displayData(); // [10,20,30,40,50]
+        qu.displayData();
         
-        li.add(2, 60);
-        // li.displayData(); // [10,20,60,30,40,50]
+//        Stack st = new Stack();
+//        st.push(10);
+//        st.push(20);
+//        st.push(30);
+//        st.push(40);
+//        st.push(50);
+//        
+//        // st.displayData(); // [50,40,30,20,10]
+//        
+//        st.pop();
+//        st.displayData(); // [40,30,20,10]
+
+    
         
-        li.removeLast();
-        // li.displayData(); // [10,20,60,30,40]
-        
-        li.remove(3);
-        // li.displayData(); // [10,20,60,40]
-        
-        int index = li.indexOf(60);
-        // System.out.println("Index of 60: "+index);
-        
-        // System.out.println("Is 50 remainded? "+li.contains(50));
-        // System.out.println("Is 20 remainded? "+li.contains(20));
-        
-        li.set(2, 30);
-        li.displayData(); // [10,20,30,40]
-        
-        int returnedData = li.get(1);
-        System.out.println("Returned Data on Index 1: "+returnedData);
+//        List li = new List();
+//        
+//        li.addLast(10);
+//        li.addLast(20);
+//        li.addLast(30);
+//        li.addLast(40);
+//        li.addLast(50);
+//        // li.displayData(); // [10,20,30,40,50]
+//        
+//        li.add(2, 60);
+//        // li.displayData(); // [10,20,60,30,40,50]
+//        
+//        li.removeLast();
+//        // li.displayData(); // [10,20,60,30,40]
+//        
+//        li.remove(3);
+//        // li.displayData(); // [10,20,60,40]
+//        
+//        int index = li.indexOf(60);
+//        // System.out.println("Index of 60: "+index);
+//        
+//        // System.out.println("Is 50 remainded? "+li.contains(50));
+//        // System.out.println("Is 20 remainded? "+li.contains(20));
+//        
+//        li.set(2, 30);
+//        li.displayData(); // [10,20,30,40]
+//        
+//        int returnedData = li.get(1);
+//        System.out.println("Returned Data on Index 1: "+returnedData);
     }
 }
