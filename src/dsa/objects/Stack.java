@@ -11,25 +11,14 @@ package dsa.objects;
 public class Stack {
     private Node top;
     
-    
     public void push(int data) {
         Node newNode = new Node(data);
-        newNode.next=top;
-        top=newNode;
-    }
-    
-    private boolean isEmpty() {
-        return top==null;
-    }
-    
-    private int size() {
-        int count=0;
-        Node temp=top;
-        while(temp!=null) {
-            count++;
-            temp=temp.next;
+        if(top==null) {
+            top=newNode;
+        } else {
+            newNode.next=top;
+            top=newNode;
         }
-        return count;
     }
     
     public void displayData() {
@@ -43,8 +32,57 @@ public class Stack {
     }
     
     public void pop() {
-        if(!isEmpty())
+        if(!isEmpty()) {
             top=top.next;
+        }
+    }
+    
+    private boolean isEmpty() {
+        return top==null;
+    }
+    
+    public int indexOf(int data) {
+        int index=size()-1;
+        Node temp=top;
+        while(temp!=null) {
+            if(temp.data==data)
+                return index;
+            index--;
+            temp=temp.next;
+        }
+        return -1;
+    }
+    
+    private int size() {
+        int count=0;
+        Node temp=top;
+        while(temp!=null) {
+            count++;
+            temp=temp.next;
+        }
+        return count;
+    }
+    
+    public boolean contains(int data) {
+        int index=size()-1;
+        Node temp=top;
+        while(temp!=null) {
+            if(temp.data==data)
+                return true;
+            index--;
+            temp=temp.next;
+        }
+        return false;
+    }
+    
+    public String toArray() {
+        String toArray="[";
+        Node temp=top;
+        for(int i=size()-1;i>=0;i--) {
+            toArray+=temp.data+",";
+            temp=temp.next;
+        }
+        return toArray+"\b]";
     }
     
     
