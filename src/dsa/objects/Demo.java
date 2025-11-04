@@ -14,22 +14,32 @@ import dsa.objects.List;
  */
 public class Demo {
     public static void main(String[] args) {
-        Stack intStack = new Stack();
-        intStack.push(100);
-        intStack.push(200);
-        intStack.push(300);
-        intStack.push(400);
-        intStack.push(500);
+        Queue intQueue = new Queue();
+        intQueue.add(100);
+        intQueue.add(200);
+        intQueue.add(300);
+        intQueue.add(400);
+        intQueue.add(500);
         
-        // intStack.displayData(); // [500,400,300,200,100]
+        intQueue.displayData(); // [500,400,300,200,100]
         
-        intStack.pop();
-        // intStack.displayData(); // [400,300,200,100]
         
-        int index = intStack.indexOf(300);
-        // System.out.println("Index of 300: "+index);
-        
-        System.out.println(intStack.toArray());
+//        Stack intStack = new Stack();
+//        intStack.push(100);
+//        intStack.push(200);
+//        intStack.push(300);
+//        intStack.push(400);
+//        intStack.push(500);
+//        
+//        // intStack.displayData(); // [500,400,300,200,100]
+//        
+//        intStack.pop();
+//        // intStack.displayData(); // [400,300,200,100]
+//        
+//        int index = intStack.indexOf(300);
+//        // System.out.println("Index of 300: "+index);
+//        
+//        System.out.println(intStack.toArray());
         
 //        Queue qu = new Queue();
 //        qu.add(10);
